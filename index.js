@@ -28,21 +28,26 @@ app.get("/info", (req, res) => {
         seeDetailsBtn: "seeDetailsBtn",
       },
     ],
+    masedge: [
+      {
+        id: 1,
+        title: "title",
+        subTitle: "subTitle",
+      },
+    ],
   });
 });
 
 app.get("/homeCarousel", (req, res) => {
-  res.send([
-    {
-      id: 1,
-      imgBg:
-        "https://res.cloudinary.com/dirbnpgsp/image/upload/v1645639669/Movies%20App/Tv_Show_jdykim.jpg",
-      title: "title",
-      subTitle: "subTitle",
-      showBtn: "showBtn",
-      seeDetailsBtn: "seeDetailsBtn",
-    },
-  ]);
+  res.send({
+    id: 1,
+    imgBg:
+      "https://res.cloudinary.com/dirbnpgsp/image/upload/v1645639669/Movies%20App/Tv_Show_jdykim.jpg",
+    title: "title",
+    subTitle: "subTitle",
+    showBtn: "showBtn",
+    seeDetailsBtn: "seeDetailsBtn",
+  });
 });
 
-app.listen(8000, () => console.log("Listening on port 8000..."));
+app.listen(3000, () => console.log("Listening on port 3000..."));
